@@ -90,13 +90,12 @@ export function mixin(Vue: VueConstructor) {
       // 'forceUpdate',
       // 'destroy'
     ];
-    props.forEach(key =>
-      proxy(ctx, key, () => vm[key], function() {
+    props.forEach(key => {
+      proxy(ctx, key, () => vm[`$${key}`], function() {
         Vue.util.warn(`Cannot assign to '${key}' because it is a read-only property`, vm);
-      })
-    );
-    method.forEach(key => proxy(ctx, key, () => vm[key]));
-
+      });
+    });
+    method.forEach(key => proxy(ctx, key, () => vm[`$${key}`]));
     if (process.env.NODE_ENV === 'test') {
       (ctx as any)._vm = vm;
     }
