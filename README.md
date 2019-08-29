@@ -10,12 +10,17 @@
 
 # Navigation
 
+- [Codesandbox](#Codesandbox)
 - [Installation](#Installation)
 - [Usage](#Usage)
 - [TypeScript](#TypeScript)
 - [Limitations](#Limitations)
 - [API](https://vue-composition-api-rfc.netlify.com/api.html)
 - [Changelog](https://github.com/vuejs/composition-api/blob/master/CHANGELOG.md)
+
+# Codesandbox
+
+https://codesandbox.io/s/vue-3-composition-api-n7lvn
 
 # Installation
 
